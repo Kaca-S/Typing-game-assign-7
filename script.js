@@ -90,3 +90,18 @@ text.addEventListener("input", () => {
 
 // Initial call to start the game
 addWordToDOM();
+
+// Start the game
+function startGame() {
+  score = 0;
+  time = 10;   
+  addWordToDOM(); // Set the first word
+  timeEl.innerText = `${time}s`; // Reset the timer display
+  endgameEl.style.display = 'none'; // Hide the end-game container
+
+  // Start the timer
+  timeInterval = setInterval(updateTime, 1000);
+}
+
+// Initial call to start the game
+startGame();
