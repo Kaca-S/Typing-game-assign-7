@@ -91,6 +91,7 @@ text.addEventListener("input", () => {
 // Initial call to start the game
 addWordToDOM();
 
+
 // Start the game
 function startGame() {
   score = 0;
