@@ -45,7 +45,6 @@ function updateScore() {
 }
 function updateTime() {
   time--; 
-
   if (time <= 0) {
     clearInterval(timeInterval); 
     gameOver();                   
@@ -53,15 +52,13 @@ function updateTime() {
   timeEl.innerText = `${time}s`;  
 }
 function gameOver() {
-  endgameEl.innerHTML = `
-    <h1>Game Over</h1>
+  endgameEl.innerHTML = `<h1>Game Over</h1>
     <p>Your final score is: <span>${score}</span></p>
     <button onclick="location.reload()">Restart</button>`;
   endgameEl.style.display = 'flex';
 }
 text.addEventListener("input", () => {
   const inputText = text.value;
-
   if (inputText === randomWord) {
     updateScore();
     addWordToDOM(); 
